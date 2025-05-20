@@ -1,0 +1,129 @@
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Headline */
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077cc;
+  font-weight: 700;
+}
+
+/* ProductForm styles */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+form input {
+  flex: 1 1 140px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 8px rgba(0,119,204,0.4);
+  outline: none;
+}
+
+form button {
+  padding: 10px 22px;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
+}
+
+form button:hover {
+  background-color: #005fa3;
+  box-shadow: 0 4px 12px rgba(0,95,163,0.6);
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #0077cc;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+thead th {
+  padding: 14px 10px;
+  text-align: left;
+}
+
+tbody tr {
+  background: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background: #e9f0fa;
+}
+
+tbody tr:hover {
+  background-color: #d6e6fb;
+  cursor: pointer;
+}
+
+tbody td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+/* Delete button */
+tbody button {
+  padding: 6px 12px;
+  background-color: #ff4c4c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+tbody button:hover {
+  background-color: #cc0000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+  }
+  form input, form button {
+    flex: 1 1 100%;
+  }
+}

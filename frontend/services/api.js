@@ -1,24 +1,24 @@
-const API = 'http://localhost:5000/products';
+const API = "https://inventory-manager-app-mfne.onrender.com";
 
 export const getProducts = async () => {
   const res = await fetch(API);
-  if (!res.ok) throw new Error('Failed to fetch products');
+  if (!res.ok) throw new Error("Failed to fetch products");
   return await res.json();
 };
 
 export const addProduct = async (product) => {
   const res = await fetch(API, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(product),
   });
-  if (!res.ok) throw new Error('Failed to add product');
+  if (!res.ok) throw new Error("Failed to add product");
   return await res.json();
 };
 
 export const deleteProduct = async (id) => {
   const res = await fetch(`${API}/${id}`, {
-    method: 'DELETE',
+    method: "DELETE",
   });
-  if (!res.ok) throw new Error('Failed to delete product');
+  if (!res.ok) throw new Error("Failed to delete product");
 };

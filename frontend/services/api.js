@@ -1,4 +1,4 @@
-const API = "https://inventory-manager-app-mfne.onrender.com";
+const API = "https://inventory-manager-app-mfne.onrender.com/products";
 
 export const getProducts = async () => {
   const res = await fetch(API);

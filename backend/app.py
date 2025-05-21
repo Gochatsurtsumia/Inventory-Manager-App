@@ -7,7 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///inventory.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
-CORS(app, supports_credentials=True)
+CORS(app, origins=["https://inventory-manager-beta-app.netlify.app"], supports_credentials=True)
 
 from models import Product  # import after db initialized
 
